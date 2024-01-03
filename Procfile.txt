@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run webapp01.py
+web: sh setup.sh && streamlit run Send2Mailpython.py
