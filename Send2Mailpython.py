@@ -31,7 +31,7 @@ mystyle1 =   '''<style> p{text-align:center;}</style>'''
 st.markdown(mystyle1, unsafe_allow_html=True)
 st.sidebar.image(image02, width=300, caption='Desenvolvedor: Massaki de O. Igarashi') 
 
-Titulo_Principal = '<p style="font-weight: bolder; color:DarkBlue; font-size: 96px;">act.MAIL 1.0</p>'
+Titulo_Principal = '<p style="font-weight: bolder; color:DarkBlue; font-size: 86px;">act.MAIL 1.0</p>'
 st.markdown(Titulo_Principal, unsafe_allow_html=True)
 mystyle1 =   '''<style> p{text-align:center;}</style>'''
 st.markdown(mystyle1, unsafe_allow_html=True)
