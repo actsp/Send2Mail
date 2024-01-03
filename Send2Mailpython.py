@@ -22,8 +22,8 @@ from Send2MaillMSK import Send2Mail
 
 millis = str(round(time.time() * 1000))
 
-image01 = Image.open('pixabay300x256.PNG')
-image02 = Image.open('act_logo300x200.PNG')
+image01 = Image.open('pixabay300x256.png')
+image02 = Image.open('act_logo300x200.png')
 st.sidebar.image(image01, width=300, caption='Envio automático de e-mail') 
 Titulo_Laterial = '<p style="font-weight: bolder; color:Blue; font-size: 18px;">Aplicativo Web para envio automático de e-mail</p>'
 st.sidebar.markdown(Titulo_Laterial, unsafe_allow_html=True)
