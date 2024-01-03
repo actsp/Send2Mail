@@ -5,4 +5,3 @@ requests
 sendgrid
 Pillow
 openpyxl
-PIL
