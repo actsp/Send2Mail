@@ -18,12 +18,12 @@ import time
 import pytz
 from datetime import datetime
 
-from Send2MaillMSK import Send2Mail
+from Send2MaillMSK import Send2Mail, IsNiver
 
 millis = str(round(time.time() * 1000))
 
-image01 = Image.open('pixabay300x256.png')
-image02 = Image.open('act_logo300x200.png')
+image01 = Image.open('pixabay300x256.PNG')
+image02 = Image.open('act_logo300x200.PNG')
 st.sidebar.image(image01, width=300, caption='Envio automático de e-mail') 
 Titulo_Laterial = '<p style="font-weight: bolder; color:Blue; font-size: 18px;">Aplicativo Web para envio automático de e-mail</p>'
 st.sidebar.markdown(Titulo_Laterial, unsafe_allow_html=True)
@@ -31,7 +31,7 @@ mystyle1 =   '''<style> p{text-align:center;}</style>'''
 st.markdown(mystyle1, unsafe_allow_html=True)
 st.sidebar.image(image02, width=300, caption='Desenvolvedor: Massaki de O. Igarashi') 
 
-Titulo_Principal = '<p style="font-weight: bolder; color:DarkBlue; font-size: 76px;">act.MAIL 1.0</p>'
+Titulo_Principal = '<p style="font-weight: bolder; color:DarkBlue; font-size: 96px;">act.MAIL 1.0</p>'
 st.markdown(Titulo_Principal, unsafe_allow_html=True)
 mystyle1 =   '''<style> p{text-align:center;}</style>'''
 st.markdown(mystyle1, unsafe_allow_html=True)
@@ -71,6 +71,13 @@ with tab2:
     if data is not None:
         df = pd.read_excel(data)
         st.dataframe(df)
+        
         if st.button(label = '✔️ ENVIAR PARA LISTA'):
             for i in range(len(df)):
                 st.write(Send2Mail(Fname,FROM, df['e-mail'][i], ASSUNTO, MSG))
+        if st.button(label = '✔️ ENVIAR P/ ANIVERSARIANTES'):
+            for i in range(len(df)):
+                if IsNiver(df["nascimento"][i]):
+                    st.write(Send2Mail(Fname,FROM, df['e-mail'][i], ASSUNTO, MSG))
+                else:
+                    st.write("Não é Niver!")
