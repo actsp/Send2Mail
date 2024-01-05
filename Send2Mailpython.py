@@ -37,12 +37,15 @@ mystyle1 =   '''<style> p{text-align:center;}</style>'''
 st.markdown(mystyle1, unsafe_allow_html=True)
 
 #INSERÇÃO DE DADOS COMUNS ÀS DUAS ABAS TAB
-st.subheader("1º Passo: Digite o Remetente.")
-FROM = st.text_input("Digite o remetente: ", "informacoes.actsp@gmail.com")
-st.subheader("2º Passo: Digite o Assunto.")
+#st.subheader("Passo 0: Digite o Remetente.")
+#FROM = st.text_input("Digite o remetente: ", "informacoes.actsp@gmail.com")
+FROM = "informacoes.actsp@gmail.com"
+st.write("Remetente:")
+st.info("informacoes.actsp@gmail.com")
+st.subheader("Passo 01: Digite o Assunto.")
 ASSUNTO = st.text_input("Digite o assunto: ", "FELICIDADES 2024") 
 Fname = st.text_input("Nome do arquivo anexo (Salvo no GitHub):", "niver.jpeg")
-st.subheader("3º Passo: Digite a mensagem e Insira o anexo!")
+st.subheader("Passo 02: Digite a mensagem e Insira o anexo!")
 
 MSG = " "
 m = st.text_area("Digite sua mensagem aqui:", "Olá! \n Passando para desejar \n um Próspero 2024 \n repleto de Alegria, \n Saúde \n e Prosperidade! \n São os votos da família ACT.SP")
@@ -52,7 +55,7 @@ if m is not None:
         #st.write(x)
         MSG+=x + " \n "   
 
-st.subheader("4º Passo: Escolha envio Simples ou Lista de Destinatários.")
+st.subheader("Passo 03: Escolha envio Simples ou Lista de Destinatários.")
 #SEPARAÇÃO DE DADOS SIMPLES E ENVIO MÚLTIPLOS EM ABAS TAB
 tab1, tab2 = st.tabs(["SIMPLES", "LISTA"])
 with tab1:
@@ -66,7 +69,7 @@ with tab2:
     #st.dataframe(df)
     #for i in range(len(df)):
     #    st.write(df['e-mail'][i])
-    st.subheader("5º Passo: Carregue o arquivo Excel com a lista de e-mails para envio em lote.")
+    st.subheader("Passo 04: Carregue o arquivo Excel com a lista de e-mails para envio em lote.")
     data = st.file_uploader("Faça Upload da Lista.XLSX para envio em lote.", type=["xlsx"])
     if data is not None:
         df = pd.read_excel(data)
