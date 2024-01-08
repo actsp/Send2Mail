@@ -42,6 +42,7 @@ st.markdown(mystyle1, unsafe_allow_html=True)
 FROM = "informacoes.actsp@gmail.com"
 st.write("Remetente:")
 st.info("informacoes.actsp@gmail.com")
+st.write("OBSERVAÇÃO: Este remetente pode ser personalizado para o e-mail da sua empresa!")
 st.subheader("Passo 01: Digite o Assunto.")
 ASSUNTO = st.text_input("Digite o assunto: ", "Teste de envio automático de e-mail ACT.SP") 
 Fname = st.text_input("Nome do arquivo anexo (Salvo no GitHub):", "act_logo300x200.png")
