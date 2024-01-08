@@ -43,12 +43,12 @@ FROM = "informacoes.actsp@gmail.com"
 st.write("Remetente:")
 st.info("informacoes.actsp@gmail.com")
 st.subheader("Passo 01: Digite o Assunto.")
-ASSUNTO = st.text_input("Digite o assunto: ", "FELICIDADES 2024") 
-Fname = st.text_input("Nome do arquivo anexo (Salvo no GitHub):", "niver.jpeg")
+ASSUNTO = st.text_input("Digite o assunto: ", "Teste de envio automático de e-mail ACT.SP") 
+Fname = st.text_input("Nome do arquivo anexo (Salvo no GitHub):", "act_logo300x200.png")
 st.subheader("Passo 02: Digite a mensagem e Insira o anexo!")
 
 MSG = " "
-m = st.text_area("Digite sua mensagem aqui:", "Olá! \n Passando para desejar \n um Próspero 2024 \n repleto de Alegria, \n Saúde \n e Prosperidade! \n São os votos da família ACT.SP")
+m = st.text_area("Digite sua mensagem aqui:", "Olá! \n Passando para desejar \n um Próspero 2024! \n Este é um e-mail enviado automaticamente \n pelo WebApp ActMail 1.0 \n e Um Produto/Serviço da empresa  \n ACT - Soluções para Pessoas.")
 if m is not None:
     textsplit = m.splitlines()
     for x in textsplit:
