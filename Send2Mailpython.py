@@ -39,7 +39,8 @@ st.markdown(mystyle1, unsafe_allow_html=True)
 #INSERÇÃO DE DADOS COMUNS ÀS DUAS ABAS TAB
 #st.subheader("Passo 0: Digite o Remetente.")
 #FROM = st.text_input("Digite o remetente: ", "informacoes.actsp@gmail.com")
-FROM = "informacoes.actsp@gmail.com"
+#FROM = "informacoes.actsp@gmail.com"
+FROM = "act.sp.contato@gmail.com"
 st.write("Remetente:")
 st.info("informacoes.actsp@gmail.com")
 st.write("OBSERVAÇÃO: Este remetente pode ser personalizado para o e-mail da sua empresa!")
