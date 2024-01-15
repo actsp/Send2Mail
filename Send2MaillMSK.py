@@ -14,7 +14,7 @@ def Send2Mail(FileName,sender_email, recipient_email, subject, body):
     #https://github.com/aws/aws-sdk-js/issues/893
     #st.write(body)
     #sender_password = "erbihdrgoocfranv"  SENHA prof.massaki@gmail.com
-    sender_password = "tcosczjpjspmxybs"  #SENHA informacoes.actsp@gmail.com
+    sender_password = "vwexaommqccvokmx"  #SENHA act.sp.contato@gmail.com
     with open(FileName, 'rb') as f:
         image_part = MIMEImage(f.read())
     message = MIMEMultipart()        
